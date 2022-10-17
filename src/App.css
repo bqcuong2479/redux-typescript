@@ -37,3 +37,11 @@
     transform: translateY(0px);
   }
 }
+
+.dark-mode {
+  background-color: black;
+}
+
+.light-mode {
+  background-color: white;
+}

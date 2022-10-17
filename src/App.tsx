@@ -3,9 +3,17 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
+import { useAppSelector } from './app/hooks';
+import {
+
+  setMode
+} from './features/counter/counterSlice';
+
 function App() {
+  const mode = useAppSelector(setMode);
   return (
     <div className="App">
+      <div className={mode ? 'dark-mode' : 'light-mode'}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
@@ -51,6 +59,7 @@ function App() {
           </a>
         </span>
       </header>
+      </div>
     </div>
   );
 }
